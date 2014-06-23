@@ -14,7 +14,7 @@
   3. Add three `UITextField`s to the new VC for Name, Latitude and Longitude
   4. Create a central Data Store. The code for a Data store is:
 
-  ```
+    ```
   + (instancetype)shared<#name#> {
     static <#class#> *_shared<#name#> = nil;
     static dispatch_once_t onceToken;
@@ -24,7 +24,7 @@
 
     return _shared<#name#>;
     }
-    ```
+   ```
 
     5. Add a Save `UIBarButtonItem` to the new VC.
     6. On save, pop the view controller to the list, reload the data on the
