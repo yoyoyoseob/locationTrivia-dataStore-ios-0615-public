@@ -58,7 +58,7 @@
 
     [location3.trivia addObjectsFromArray:@[trivia3A]];
 
-    self.store.locations = @[location2, location1, location3];
+    self.store.locations = [NSMutableArray arrayWithArray:@[location2, location1, location3]];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
