@@ -10,6 +10,6 @@
 
 @interface FISLocationsDataStore : NSObject
 
-@property (strong, nonatomic) NSArray *locations;
+@property (strong, nonatomic) NSMutableArray *locations;
 + (instancetype)sharedLocationsDataStore;
 @end
