@@ -18,7 +18,6 @@
 		D80B86131958A02C0042C042 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D80B85F21958A02C0042C042 /* Foundation.framework */; };
 		D80B86141958A02C0042C042 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D80B85F61958A02C0042C042 /* UIKit.framework */; };
 		D80B861C1958A02C0042C042 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D80B861A1958A02C0042C042 /* InfoPlist.strings */; };
-		D80B861E1958A02C0042C042 /* locationTrivia_dataStoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D80B861D1958A02C0042C042 /* locationTrivia_dataStoreTests.m */; };
 		D80B86301958A0570042C042 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D80B86271958A0570042C042 /* Main.storyboard */; };
 		D80B86311958A0570042C042 /* FISLocationsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D80B86291958A0570042C042 /* FISLocationsTableViewController.m */; };
 		D80B86321958A0570042C042 /* FISTriviaTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D80B862B1958A0570042C042 /* FISTriviaTableViewController.m */; };
@@ -53,7 +52,6 @@
 		D80B86111958A02C0042C042 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		D80B86191958A02C0042C042 /* locationTrivia-dataStoreTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "locationTrivia-dataStoreTests-Info.plist"; sourceTree = "<group>"; };
 		D80B861B1958A02C0042C042 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		D80B861D1958A02C0042C042 /* locationTrivia_dataStoreTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = locationTrivia_dataStoreTests.m; sourceTree = "<group>"; };
 		D80B86271958A0570042C042 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		D80B86281958A0570042C042 /* FISLocationsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISLocationsTableViewController.h; sourceTree = "<group>"; };
 		D80B86291958A0570042C042 /* FISLocationsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISLocationsTableViewController.m; sourceTree = "<group>"; };
@@ -157,7 +155,6 @@
 		D80B86171958A02C0042C042 /* locationTrivia-dataStoreTests */ = {
 			isa = PBXGroup;
 			children = (
-				D80B861D1958A02C0042C042 /* locationTrivia_dataStoreTests.m */,
 				D80B86181958A02C0042C042 /* Supporting Files */,
 			);
 			path = "locationTrivia-dataStoreTests";
@@ -284,7 +281,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D80B861E1958A02C0042C042 /* locationTrivia_dataStoreTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,6 +469,7 @@
 				D80B86231958A02C0042C042 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D80B86241958A02C0042C042 /* Build configuration list for PBXNativeTarget "locationTrivia-dataStoreTests" */ = {
 			isa = XCConfigurationList;
@@ -481,6 +478,7 @@
 				D80B86261958A02C0042C042 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
