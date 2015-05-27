@@ -1,23 +1,18 @@
----
-  tags: intermediate, tableviews, dataStore, dataManager, singleton
-  language: objc
----
-
 # Location Trivia Data Manager
 
 ## Goals
 
-1. Understand how to set up a singleton class
-1. Use a singleton object to hold data to be accessed from multiple view controllers.
+1. Understand how to set up a shared instance
+1. Use a shared instance to hold data to be accessed from multiple view controllers.
 
 ## Review
 
-A singleton class has a special initializer that allows it to be created only once in the lifespan of the application. The practical value of this special ability permits the initializer method to install a pointer reference to the same custom object from anywhere else in the program at any point in time after launch. This is very useful for organizing your application's data into one place.
+A shared instance has a special initializer that only allows its class object to be create a single instance in the lifespan of the application, with any subsequent calls to the initializer pointing to the one instance already instantiated. You'll often hear this referred to as a "singleton." The practical value of this special ability permits this one shared instance (and whatever data it holds onto) to be accessed by various other objects in your program. This is very useful for organizing your application's data into one place--hence the designation in this case of "Data Manager."
 
-The `dispatch_once` token is what permits this behavior. It's kind of like a punch card that reads 'admit one.' It retains all of its identifying information, but won't permit the application to create a second instance of the custom class in question. The code that Apple provides for this purpose is: 
+The `dispatch_once` token is what permits this behavior. It's kind of like a punch card that reads 'admit one.' It retains all of its identifying information, but won't permit the application to run the block more than once. In the current case, that means only instantiating the shared instance one time. The code that Apple provides for creating such a shared instance is this somewhat cryptic set of code: 
 
-   ```
-  + (instancetype)shared<#name#> {
+```objc
++ (instancetype)shared<#name#> {
     static <#class#> *_shared<#name#> = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -25,11 +20,12 @@ The `dispatch_once` token is what permits this behavior. It's kind of like a pun
     });
 
     return _shared<#name#>;
-    }
-   ```
-In the scope of this lab we're going call this class `FISLocationsDataManager` meaning we need to fill in this provided code as follows:
-
+}
 ```
+
+In the scope of this lab we're going to call this class `FISLocationsDataManager` meaning we need to fill out the placeholders in this provided code as follows:
+
+```objc
 + (instancetype)sharedLocationsDataManager {
     static FISLocationsDataManager *_sharedLocationsDataManager = nil;
     static dispatch_once_t onceToken;
@@ -42,13 +38,13 @@ In the scope of this lab we're going call this class `FISLocationsDataManager` m
 ```
 You'll notice that it's calling an initializer which we need to customize. Since we want our data store to hold our `FISLocation` objects, let's give it a property that's an `NSMutableArray` called 'locations' and instantiate it in the initializer.
 
-```
+```objc
 FISLocationsDataManager.h
 
 @property (strong, nonatomic) NSMutableArray *locations;
 ```
 
-```
+```objc
 FISLocationsDataManager.m
 
 - (instancetype)init
@@ -60,15 +56,18 @@ FISLocationsDataManager.m
     return self;
 }
 ```
-Now that we have our singleton class set up, we can access it from any view controller by adding it as a property that we then alloc-init in `viewDidLoad` by calling the `shared<#name#>` initializer that we set up.
+Now that we have our singleton class set up, we can access it from any view controller by adding by calling the `shared<#name#>` initializer that we previously set up.
 
-```
+```objc
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	
-    self.locationsDataManager = [FISLocationsDataManager sharedLocationsDataManager];
+    FISLocationsDataManager *locationsDataManager = 
+        [FISLocationsDataManager sharedLocationsDataManager];
 }
 ```
+While it isn't necessary to, it is also possible to set a shared instance as a property within another class.
+
 This next lab already has these steps set up for you. Take a moment to look over the data manager's files to see how they're laid out, then solve the lab by connecting a new view controller to the data manager.
 
 ## Instructions
