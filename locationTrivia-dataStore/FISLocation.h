@@ -16,12 +16,14 @@
 @property (strong, nonatomic) NSNumber *longitude;
 @property (strong, nonatomic) NSMutableArray *trivia;
 
-- (id) initWithName:(NSString *)name Latitude:(NSNumber *)latitude Longitude:(NSNumber *)longitude;
+- (id) initWithName:(NSString *)name
+           latitude:(NSNumber *)latitude
+          longitude:(NSNumber *)longitude;
 
 - (NSString *)shortenedNameToLength:(NSInteger)length;
 - (BOOL)verifyLocation;
 - (FISTrivia *)topTrivia;
 
--(NSString *)numberOfTriva;
+- (NSString *)numberOfTriva;
 
 @end

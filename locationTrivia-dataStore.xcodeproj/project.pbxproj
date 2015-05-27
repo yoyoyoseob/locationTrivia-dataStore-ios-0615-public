@@ -61,7 +61,7 @@
 		D80B862D1958A0570042C042 /* FISLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISLocation.m; sourceTree = "<group>"; };
 		D80B862E1958A0570042C042 /* FISTrivia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISTrivia.h; sourceTree = "<group>"; };
 		D80B862F1958A0570042C042 /* FISTrivia.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISTrivia.m; sourceTree = "<group>"; };
-		D80B86351958A0870042C042 /* FISLocationsDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISLocationsDataStore.h; sourceTree = "<group>"; };
+		D80B86351958A0870042C042 /* FISLocationsDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISLocationsDataManager.h; sourceTree = "<group>"; };
 		D80B86361958A0870042C042 /* FISLocationsDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISLocationsDataStore.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -122,7 +122,7 @@
 		D80B85F81958A02C0042C042 /* locationTrivia-dataStore */ = {
 			isa = PBXGroup;
 			children = (
-				D80B86351958A0870042C042 /* FISLocationsDataStore.h */,
+				D80B86351958A0870042C042 /* FISLocationsDataManager.h */,
 				D80B86361958A0870042C042 /* FISLocationsDataStore.m */,
 				D80B86011958A02C0042C042 /* FISAppDelegate.h */,
 				D80B86021958A02C0042C042 /* FISAppDelegate.m */,

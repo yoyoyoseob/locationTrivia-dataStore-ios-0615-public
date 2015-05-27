@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "FISLocationsDataStore.h"
+#import "FISLocationsDataManager.h"
 
 @interface FISLocationsTableViewController : UITableViewController
-@property (strong, nonatomic) FISLocationsDataStore *store;
+@property (strong, nonatomic) FISLocationsDataManager *locationsDataManager;
 @end
