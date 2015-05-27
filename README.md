@@ -2,12 +2,12 @@
 
 ## Goals
 
-1. Understand how to set up a shared instance
+1. Understand how to set up a shared instance.
 1. Use a shared instance to hold data to be accessed from multiple view controllers.
 
 ## Review
 
-A shared instance has a special initializer that only allows its class object to be create a single instance in the lifespan of the application, with any subsequent calls to the initializer pointing to the one instance already instantiated. You'll often hear this referred to as a "singleton." The practical value of this special ability permits this one shared instance (and whatever data it holds onto) to be accessed by various other objects in your program. This is very useful for organizing your application's data into one place--hence the designation in this case of "Data Manager."
+A shared instance has a special initializer that only allows its class object to create a single instance in the lifespan of the application, with any subsequent calls to the initializer pointing to the one instance already instantiated. You'll often hear this referred to as a "singleton." The practical value of this special ability permits this one shared instance (and whatever data it holds onto) to be accessed by various other objects in your program. This is very useful for organizing your application's data into one place--hence the designation in this case of "Data Manager."
 
 The `dispatch_once` token is what permits this behavior. It's kind of like a punch card that reads 'admit one.' It retains all of its identifying information, but won't permit the application to run the block more than once. In the current case, that means only instantiating the shared instance one time. The code that Apple provides for creating such a shared instance is this somewhat cryptic set of code: 
 
