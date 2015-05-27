@@ -56,7 +56,7 @@ FISLocationsDataManager.m
     return self;
 }
 ```
-Now that we have our singleton class set up, we can access it from any view controller by adding by calling the `shared<#name#>` initializer that we previously set up.
+Now that we have our singleton class set up, we can access it from any view controller by calling the `shared<#name#>` initializer that we previously set up.
 
 ```objc
 - (void)viewDidLoad {
