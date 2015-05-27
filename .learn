@@ -2,5 +2,8 @@ tags:
   - intermediate
   - tableviews
   - dataStore
+  - dataManager
+  - singletons
+  - sharedInstance
 languages:
   - objc

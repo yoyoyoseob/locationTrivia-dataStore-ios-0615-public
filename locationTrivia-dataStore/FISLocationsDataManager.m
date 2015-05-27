@@ -1,22 +1,22 @@
 //
-//  FISLocationsDataStore.m
+//  FISLocationsDataManager.m
 //  locationTrivia-dataStore
 //
 //  Created by Joe Burgess on 6/23/14.
 //  Copyright (c) 2014 Joe Burgess. All rights reserved.
 //
 
-#import "FISLocationsDataStore.h"
+#import "FISLocationsDataManager.h"
 
-@implementation FISLocationsDataStore
-+ (instancetype)sharedLocationsDataStore {
-    static FISLocationsDataStore *_sharedLocationsDataStore = nil;
+@implementation FISLocationsDataManager
++ (instancetype)sharedLocationsDataManager {
+    static FISLocationsDataManager *_sharedLocationsDataManager = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _sharedLocationsDataStore = [[FISLocationsDataStore alloc] init];
+        _sharedLocationsDataManager = [[FISLocationsDataManager alloc] init];
     });
 
-    return _sharedLocationsDataStore;
+    return _sharedLocationsDataManager;
 }
 
 - (instancetype)init

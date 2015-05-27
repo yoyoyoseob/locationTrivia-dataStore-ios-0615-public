@@ -1,5 +1,5 @@
 //
-//  FISLocationsDataStore.h
+//  FISLocationsDataManager.h
 //  locationTrivia-dataStore
 //
 //  Created by Joe Burgess on 6/23/14.
@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface FISLocationsDataStore : NSObject
+@interface FISLocationsDataManager : NSObject
 
 @property (strong, nonatomic) NSMutableArray *locations;
-+ (instancetype)sharedLocationsDataStore;
++ (instancetype)sharedLocationsDataManager;
 @end
