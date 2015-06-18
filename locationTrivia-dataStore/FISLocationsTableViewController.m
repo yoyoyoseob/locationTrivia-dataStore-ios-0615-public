@@ -5,9 +5,10 @@
 //  Created by Joe Burgess on 6/20/14.
 //  Copyright (c) 2014 Joe Burgess. All rights reserved.
 //
-#import "FISLocation.h"
+
 #import "FISLocationsTableViewController.h"
 #import "FISTriviaTableViewController.h"
+#import "FISLocation.h"
 
 @interface FISLocationsTableViewController ()
 
@@ -71,6 +72,12 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table view data source
@@ -146,14 +153,15 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-
-    NSIndexPath *ip = [self.tableView indexPathForSelectedRow];
-    FISLocation *location = self.locationsDataManager.locations[ip.row];
-
-    FISTriviaTableViewController *triviaVC = segue.destinationViewController;
-
-    triviaVC.trivia = location.trivia;
-
+    
+    if ([segue.destinationViewController isKindOfClass:[FISTriviaTableViewController class]]){
+        NSIndexPath *ip = [self.tableView indexPathForSelectedRow];
+        FISLocation *location = self.locationsDataManager.locations[ip.row];
+        
+        FISTriviaTableViewController *triviaVC = segue.destinationViewController;
+        
+        triviaVC.trivia = location.trivia;
+    }
 }
 
 @end
